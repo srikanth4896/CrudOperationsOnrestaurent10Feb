@@ -1,0 +1,28 @@
+﻿@model CrudOperationsOnRestaurentAss10Feb.Models.Restaurant
+@{
+    ViewBag.Title = "Update";
+}
+
+<h2>Update Restaurent </h2>
+
+<form action="/Home/Update/@Model.Rid" method="post">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="Rid">Restaurent Id</label>
+            <input type="hidden" name="Rid" value="@Model.Rid" />
+            <input type="text" name="Rname" class="form-control" id="Rname" placeholder="Restaurent Name..." value="@Model.Rname" />
+        </div>
+       
+        <div class="form-group col-md-6">
+            <label for="CusineType">CusineType</label>
+            <select class="form-control" id="CusineType" name="CusineType">
+                
+                <option value="Indian">Indian</option>
+                <option value="Italian">Italian</option>
+                <option value="French">French</option>
+            </select>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-success">Update</button>
+    <a class="btn btn-dark" href="/Home/Index">Cancel</a>
+</form>

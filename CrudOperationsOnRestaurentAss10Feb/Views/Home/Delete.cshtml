@@ -1,0 +1,22 @@
+﻿@model CrudOperationsOnRestaurentAss10Feb.Models.Restaurant
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete Restaurent</h2>
+<form action="/Home/Update/@Model.Rid" method="post">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="RName">Restaurent Name:</label>
+            <input type="hidden" name="Rid" value="@Model.Rid" />
+            <h3> @Model.Rname</h3>
+</div>
+        <div class="form-group col-md-6" >
+            <label  for="cusineType">Cusine Type:</label>
+            <h3> @Model.CusineType</h3>
+</div>
+    </div>
+    <button type="submit" class="btn btn-danger">Delete Restaurent</button>
+    <a class="btn btn-dark" href="/Home/Index">Cancel</a>
+</form>
+
